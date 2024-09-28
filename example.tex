@@ -1,0 +1,106 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+\title{henri-astro beamer template}
+\date{Stardate 123456}
+\author{Henriette Wirth}
+
+\usetheme{henri-astro}
+
+\begin{document}
+
+\begin{frame}[noframenumbering]
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Table of contents}
+  \tableofcontents
+\end{frame}
+
+
+\section{frame without subtitle}
+\begin{frame}
+  \frametitle{frame without subtitle}
+  
+  \begin{block}{Block title}
+    some text\\
+    some more text
+  \end{block}  
+  
+  \begin{itemize}
+     \item<1-| alert@1> 1st item
+     \item<2-> 2nd item
+     \item<3-> 3rd item
+     \begin{itemize}
+       \item<3-> bla
+       \item<3-> keks
+     \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{frame with subtitle}
+\begin{frame}
+  \frametitle{frame with}
+  \framesubtitle{subtitle}
+  
+  \begin{theorem}
+    This is a theorem.
+  \end{theorem}  
+  
+  \begin{table}
+    \caption{This is a table.}
+    \begin{tabular}{r|l}
+      Col1 & Col2 \\\hline
+      a & b \\
+      c & d
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+
+\section{Figures}
+\begin{frame}
+  \frametitle{Figures}
+  
+  \begin{figure}
+    \includegraphics[scale=0.5]{bgtitlepage.jpg}
+    \caption{This is a NGC 1850!}
+  \end{figure}
+\end{frame}
+
+
+\section{Figures with frame}
+\begin{frame}
+  \frametitle{Figures with frame}
+  
+  \begin{figure}
+    \includegraphics[scale=0.5,cframe=accentcolour 0.5pt,center]{bgtitlepage.jpg}
+    \caption{This is a NGC 1850 with a frame around it!}
+  \end{figure}
+\end{frame}
+
+\section{multiple figures}
+\begin{frame}
+  \frametitle{A frame with multiple figures}
+  
+  \begin{figure}
+    \centering
+  \begin{minipage}[t]{0.5\textwidth}
+    \includegraphics[scale=0.3]{bgtitlepage.jpg}
+    \caption{This is a NGC 1850!}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \includegraphics[scale=0.3,cframe=accentcolour 0.5pt,center]{bgtitlepage.jpg}
+    \caption{This is a NGC 1850 with a frame around it!}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\end{document}

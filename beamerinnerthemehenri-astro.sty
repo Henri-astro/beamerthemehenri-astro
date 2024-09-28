@@ -1,0 +1,38 @@
+\mode<presentation>
+
+\setbeamertemplate{background}{
+}
+
+% Title page
+\defbeamertemplate*{title page}{henri-astro}[1][]
+{ 
+  \thispagestyle{empty} %remove line number from title page
+
+  \makebox[\linewidth]{
+    \centering\includegraphics[width=\paperwidth,height=\paperheight]{bgtitlepage.jpg}
+  }
+
+  \vspace*{-\paperheight}
+
+  \begin{tikzpicture}[remember picture,overlay]
+  \node[below,inner sep=0pt,text width=\textwidth, align=center] at ($(current page.north)+(0,-1.0cm)$)
+    {{\usebeamerfont{title}\inserttitle\par}%
+    \vspace{0.3cm}
+    {\usebeamerfont{author}\insertauthor}};
+  \node[below,inner sep=0pt,text width=\textwidth] at ($(current page.north)+(-0.5,-9cm)$)
+    {\usebeamerfont{author}\insertdate};
+  \end{tikzpicture}
+  
+  \vspace*{\paperheight}  %latex apparently needs this to not mess everything up...
+}
+
+% Items and blocks
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+\setbeamertemplate{blocks}[default]
+
+%captions
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\mode
+<all>
