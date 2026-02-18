@@ -11,7 +11,7 @@ To use the template the following files need to be at a place pdflatex can find:
  * bgtitlepage.jpg
  
 This can either be the local project directory or one of the global directories pdflatex uses. For Linux I recommend: ~/texmf/tex/latex/beamerthemehenri-astro
-As an example for this package example.tex is procided.
+As an example for this package example.tex is provided.
 
 # features
 
